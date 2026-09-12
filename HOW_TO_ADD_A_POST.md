@@ -1,77 +1,46 @@
-# How to add a new blog post (no coding required)
+# How to add a new blog post
 
-You never need to install anything or touch a terminal. Everything below
-happens in your browser on github.com.
+You don't need to know Markdown, git, or the terminal. Everything happens
+by filling out a form in your browser.
 
-## 1. Go to the `_posts` folder
+## 1. Open the "New Blog Post" form
 
-Open this repository on github.com and click into the `_posts` folder.
+Go to the **Issues** tab of this repository on github.com, then click
+**New issue**. You'll see a form called **"📝 New Blog Post"** — click it.
 
-## 2. Create a new file
+(Direct link: `https://github.com/SteveSWilson/SteveSWilson.github.io/issues/new/choose`)
 
-Click **Add file → Create new file**.
+## 2. Fill in the form
 
-Name the file exactly like this:
+- **Post Title** — required.
+- **Category** — optional, a short label like "Travel" or "Life".
+- **Short summary** — optional, shown as a preview on the homepage.
+- **Post Content** — required. Just write normally, like an email. Leave a
+  blank line between paragraphs.
 
-```
-YYYY-MM-DD-a-short-title.md
-```
+Click **Submit new issue**.
 
-For example: `2026-09-12-my-weekend-trip.md`
+## 3. Wait a minute, then check the comment
 
-- The date must come first, in `YYYY-MM-DD` format.
-- After the date, use lowercase words separated by dashes.
-- The file must end in `.md`.
+Within a minute or so, a comment appears on your issue with a link. Click
+it — it takes you to a "pull request" (just a preview/review screen) with
+your post already written.
 
-## 3. Paste this template in and edit it
+## 4. Click the green "Merge pull request" button
 
-```
----
-layout: post
-title:  "My Weekend Trip"
-date:   2026-09-12 09:00:00 -0000
----
+That's it — clicking it publishes your post. The live site at
+**SteveSWilson.github.io** updates automatically within a couple of
+minutes.
 
-Write your post here! You can use plain text, or **bold**, *italic*,
-and [links](https://example.com) using Markdown.
-```
+## Editing or removing a post later
 
-- Change `title` to your post's title.
-- Change `date` to match the date in the filename (the time and `-0000` can
-  stay as-is, or you can leave them out).
-- Keep the three dashes (`---`) exactly as shown — that section is called
-  "front matter" and tells the site how to display your post. If it's
-  missing or the dashes are wrong, the automated check described below will
-  fail and tell you so.
-- Everything below the second `---` is your actual post content.
+Find the post's file in the `_posts` folder on github.com, click the pencil
+icon (✏️) to edit it, or the trash icon to delete it, then commit the
+change directly to `main`. This part does involve looking at the raw file,
+so if you'd rather not, just ask for help.
 
-## 4. Commit the file
+## If something goes wrong
 
-Scroll down, and click **Commit changes...**. GitHub will ask if you want to
-commit directly to `main` or open a pull request:
-
-- **Fastest:** commit directly to `main`. Your post goes live automatically
-  within a minute or two.
-- **Safer (recommended if you want a chance to preview/undo):** choose
-  "Create a new branch and start a pull request." This runs the automated
-  checks first and lets you see if anything looks wrong before it goes
-  live. When you're happy, click **Merge pull request**.
-
-## What happens automatically
-
-- Every pull request automatically runs a check that builds the site and
-  looks for broken links or images, so you'll get a warning before
-  publishing if something's off.
-- Every time `main` is updated (directly, or by merging a pull request),
-  the site automatically rebuilds and publishes to
-  https://SteveSWilson.github.io within a couple of minutes.
-
-## Editing or removing a post
-
-Open the file in `_posts`, click the pencil icon to edit it (or the trash
-icon to delete it), make your change, and commit — same as above.
-
-## Editing the About page or homepage text
-
-The About page lives in `about.md` at the root of the repository, and can
-be edited the same way.
+If the comment on your issue says something went wrong, it's almost always
+an unusual character in the title. Simplify the title, open the issue
+again, and save it (even without other changes) to retry.
