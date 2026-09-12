@@ -1,0 +1,48 @@
+name: "📝 New Blog Post"
+description: Fill this out to write and publish a new blog post. No coding needed!
+title: "New post: "
+labels: ["new-post"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in the fields below, then click **Submit new issue** at the bottom.
+        A moment later, you'll get a comment here with a link to review and
+        publish your post — no files, Markdown, or git required.
+
+  - type: input
+    id: post-title
+    attributes:
+      label: Post Title
+      placeholder: "My Weekend Trip"
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Category (optional)
+      description: A single word or short phrase to label this post, e.g. "Travel" or "Life".
+      placeholder: "General"
+    validations:
+      required: false
+
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: Short summary (optional)
+      description: One or two sentences shown as a preview on the homepage. If left blank, the start of your post will be used instead.
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Post Content
+      description: >-
+        Write your post here, just like a normal message. Plain text is fine.
+        Leave a blank line between paragraphs to start a new one.
+      placeholder: |
+        Write your post here...
+    validations:
+      required: true
