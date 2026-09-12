@@ -1,0 +1,28 @@
+title: Steve S. Wilson
+tagline: Thoughts, notes, and updates
+description: >-
+  Personal website and blog of Steve S. Wilson.
+url: "https://SteveSWilson.github.io"
+baseurl: ""
+
+theme: minima
+minima:
+  skin: classic
+
+header_pages:
+  - about.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+show_excerpts: true
+
+# Folders/files Jekyll should not process or copy into the built site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - HOW_TO_ADD_A_POST.md
+  - vendor/
+  - node_modules/
